@@ -1,0 +1,32 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 10px;
+    background-color: rgb(4, 62, 130);
+}
+
+body a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 90px;
+}
+
+nav button{
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+}
