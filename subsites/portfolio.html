@@ -1,12 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="../styles/portfolio-styles.css">
+    <title>Portfolio - WebCore Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2A3B4C;
+            --accent-color: #ffffff;
+            --gradient: linear-gradient(135deg, #2A3B4C 0%, #1E293B 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: rgb(29, 40, 53);
+            color: #ffffff;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(42, 59, 76, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        nav img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .portfolio-section {
+            padding: 120px 5% 50px;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 16/9;
+            text-decoration: none;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: rgba(42, 59, 76, 0.9);
+            transition: bottom 0.3s ease;
+        }
+
+        .portfolio-item:hover .overlay {
+            bottom: 0;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: var(--accent-color);
+        }
+
+        .overlay h3 {
+            margin: 0 0 0.5rem 0;
+            text-align: left;
+        }
+
+        .overlay p {
+            margin: 0;
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../img/Logos/logo-weiss-transparent.png" alt="WebCore Development Logo"></a>
+            <ul>
+                <li><a href="../index.html#leistungen">Leistungen</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="uber-mich.html">Über mich</a></li>
+                <li><a href="../index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="portfolio-section">
+        <h1>Meine Projekte</h1>
+        <div class="portfolio-grid">
+            <a href="https://github.com/mzehnder11/HighDivePortfolio" class="portfolio-item">
+                <img src="../img/highdive-portfolio.png" alt="Highdive Portfolio">
+                <div class="overlay">
+                    <h3>Highdive Portfolio</h3>
+                    <p>Webdesign & Entwicklung</p>
+                </div>
+            </a>
+            <a href="https://github.com/mzehnder11/Webseite-Staedte" class="portfolio-item">
+                <img src="../img/website-staedte.png" alt="Website Städte">
+                <div class="overlay">
+                    <h3>Website Städte</h3>
+                    <p>Webdesign & Entwicklung</p>
+                </div>
+            </a>
+            <!-- Platzhalter für weitere Projekte -->
+            <a href="#" class="portfolio-item">
+                <img src="../img/placeholder-project.jpg" alt="Kommendes Projekt">
+                <div class="overlay">
+                    <h3>Kommendes Projekt</h3>
+                    <p>In Entwicklung</p>
+                </div>
+            </a>
+        </div>
+    </section>
 </body>
 </html>

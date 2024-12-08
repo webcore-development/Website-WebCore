@@ -12,14 +12,14 @@
     <style>
         :root {
             --primary-color: #2A3B4C;
-            --accent-color: #FF6B6B;
+            --accent-color: #ffffff;
             --gradient: linear-gradient(135deg, #2A3B4C 0%, #1E293B 100%);
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            background: var(--gradient);
+            background-color: rgb(29, 40, 53);
             color: #ffffff;
         }
 
@@ -225,10 +225,10 @@
         }
 
         .contact-form button {
-            background: var(--accent-color);
+            background-color: transparent;
             color: white;
             padding: 1rem;
-            border: none;
+            border: 0.1rem solid var(--accent-color);
             border-radius: 8px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -264,7 +264,7 @@
         <ul>
             <li><a href="#leistungen">Leistungen</a></li>
             <li><a href="subsites/portfolio.html">Portfolio</a></li>
-            <li><a href="subsites/uber-mich.html">Über uns</a></li>
+            <li><a href="subsites/uber-mich.html">Über mich</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
@@ -278,7 +278,7 @@
     </section>
 
     <section id="leistungen" class="services">
-        <h2>Unsere Leistungen</h2>
+        <h2>Leistungen</h2>
         <div class="services-grid">
             <div class="service-card">
                 <img src="img/webdesign-icon.svg" alt="Webdesign">
@@ -308,11 +308,11 @@
                     <p>Webdesign & Entwicklung</p>
                 </div>
             </a>
-            <a href="subsites/portfolio.html" class="portfolio-item">
-                <img src="img/projekt2.jpg" alt="Projekt 2">
+            <a href="https://github.com/mzehnder11/Webseite-Staedte" class="portfolio-item">
+                <img src="img/website-staedte.png" alt="Projekt 2">
                 <div class="overlay">
-                    <h3>Projekt 2</h3>
-                    <p>E-Commerce Lösung</p>
+                    <h3>Website Städte</h3>
+                    <p>Webdesign & Entwicklung</p>
                 </div>
             </a>
         </div>
@@ -321,10 +321,10 @@
 
     <section id="kontakt" class="contact">
         <h2>Kontaktieren Sie uns</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Ihr Name" required>
-            <input type="email" placeholder="Ihre E-Mail" required>
-            <textarea placeholder="Ihre Nachricht" required></textarea>
+        <form class="contact-form" action="https://formspree.io/f/mbljegyb" method="POST">
+            <input type="text" name="name" placeholder="Ihr Name" required>
+            <input type="email" name="email" placeholder="Ihre E-Mail" required>
+            <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
             <button type="submit">Nachricht senden</button>
         </form>
     </section>

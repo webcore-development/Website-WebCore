@@ -1,12 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Über mich</title>
-    <link rel="stylesheet" href="../styles/uber-mich-styles.css">
+    <title>Über mich - WebCore Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2A3B4C;
+            --accent-color: #ffffff;
+            --gradient: linear-gradient(135deg, #2A3B4C 0%, #1E293B 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: rgb(29, 40, 53);
+            color: #ffffff;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(42, 59, 76, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        nav img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .about-section {
+            padding: 120px 5% 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-image {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-text h1 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .about-text a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .about-text a:hover {
+            text-decoration: underline;
+        }
+
+        .skills {
+            margin-top: 3rem;
+        }
+
+        .skills h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../img/Logos/logo-weiss-transparent.png" alt="WebCore Development Logo"></a>
+            <ul>
+                <li><a href="../index.html#leistungen">Leistungen</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="uber-mich.html">Über mich</a></li>
+                <li><a href="../index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/400x600" alt="Profilbild">
+                </div>
+                <div class="about-text">
+                    <h1>Über mich</h1>
+                    <p>Seit etwas über einem Jahr beschäftige ich mich fast Täglich mit Webentwiklung</p>
+                    <p>Was ich an HTML, CSS etc. im vergleich zu anderen Programmierungsformen liebe ist, dass man Grafische Ergebnisse hat und immer gerade sieht, was man geschaffen hat.</p>
+                    <p>Neben der Webentwiklung mache ich sehr gerne Kraftsport und bin ein leidenschaftlicher <a href="https://github.com/mzehnder11/HighDivePortfolio">Turmspringer</a>.</p>
+                    
+                    <div class="skills">
+                        <h2>Meine Fähigkeiten</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">HTML5</div>
+                            <div class="skill-item">CSS3</div>
+                            <div class="skill-item">JavaScript</div>
+                            <div class="skill-item">Responsive Design</div>
+                            <div class="skill-item">UI/UX Design</div>
+                            <div class="skill-item">SEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
